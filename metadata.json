@@ -1,0 +1,8 @@
+{
+  "name": "Quang Tri 4.0",
+  "description": "An immersive virtual tour of historical sites in Quang Tri province, Vietnam, guided by an AI assistant. Explore 360-degree views and chat with an AI tour guide for detailed information. VR compatible.",
+  "requestFramePermissions": [
+    "microphone",
+    "display-capture"
+  ]
+}
