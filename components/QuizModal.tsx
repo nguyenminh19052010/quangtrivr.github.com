@@ -114,11 +114,13 @@ const QuizModal: React.FC<QuizModalProps> = ({ isOpen, onClose }) => {
         setShowResult(false);
     };
 
-    const calculateScore = () => {
-        return userAnswers.reduce((acc, answer, idx) => {
+    const calculateScore = (): number => {
+        return userAnswers.reduce((acc: number, answer, idx) => {
             // Safe check: questions[idx] might be undefined if something is out of sync
-            if (questions[idx] && answer === questions[idx].correctIndex) return (acc || 0) + 1;
-            return acc || 0;
+            if (questions[idx] && answer === questions[idx].correctIndex) {
+                return acc + 1;
+            }
+            return acc;
         }, 0);
     };
 
